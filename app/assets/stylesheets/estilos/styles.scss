@@ -1,0 +1,136 @@
+// colores //
+
+.blue {
+    background-color: #2196F3 !important;
+}
+
+.green-flat {
+    background-color: #0ABF75 !important;
+}
+
+
+// textos //
+
+.text-left {
+    text-align: left;
+}
+
+.slim, .light {
+    font-weight: 200;
+}
+
+.be-tall {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.black-text {
+    color: #000000 !important;
+}
+
+.white-text {
+    color: #FFFFFF !important;
+}
+
+.big-p {
+  font-size: 25px;
+}
+
+.big-p2 {
+  font-size: 22px;
+}
+
+.small-p {
+  font-size: 15px;
+}
+
+.p-W100 {
+  width: 100%;
+}
+
+
+// paddings ///
+
+    .big-padding {
+        padding: 2em 1.5em;
+    }
+
+    .large-padding {
+        padding: 10px 15px;
+    }
+    // mas//
+
+    .cover-background {
+        -moz-background-size: cover !important;
+        background-size: cover !important;
+        background-position: center;
+    }
+    /// footer ///
+    .f-margin {
+      margin-left: 30px;
+    }
+
+    /// titulares and Ultimas subidas//
+
+    .left-margin {
+      margin-left: 10px;
+    }
+
+    // extra//
+
+    .no-margin {
+        margin: 0px !important;
+    }
+
+    .top-30 {
+      margin-top: 30px;
+    }
+
+    .top-container {
+      margin-top: 62px;
+    }
+
+    .botton-15 {
+      margin-bottom: 15px;
+    }
+
+    .courses-home-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+/// extras ///
+.m-15 {
+  margin-left: 15px;
+}
+.full-width {
+    width: 100%;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+    border-radius: 4px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+}
+
+
+#body {
+    margin-top: 96px;
+    max-width: 100%;
+}

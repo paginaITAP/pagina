@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Version31</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Inicio del Nav -->
+    <%= render "partials/navbar" %>
+    <!-- Fin del Nav -->
+
+    <div class="top-container">
+    <%= yield %>
+
+    <!-- Inicio de Footer -->
+
+    <%= render "partials/footer" %>
+    <!-- Fin de Footer -->
+    </div>
+
+  </body>
+</html>

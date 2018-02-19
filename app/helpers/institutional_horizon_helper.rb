@@ -1,0 +1,2 @@
+module InstitutionalHorizonHelper
+end

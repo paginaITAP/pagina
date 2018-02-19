@@ -1,0 +1,19 @@
+.img_NP {
+  max-width: 330px;
+  margin: 0px;
+}
+
+.text {
+  margin-left: 18px;
+}
+
+@media (max-width: 767px) {
+  .img_NP  {
+  max-width: 100%;
+  }
+
+  .text {
+    margin-left: 0px;
+
+  }
+}

@@ -1,0 +1,74 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+  <%= link_to root_path, :class => "" do %>
+    <%= image_tag('logo.png' ,:class => "", :width => "120") %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to root_path, :class => "nav-link" do %>
+          <%= ion_icon "home"%> Inicio
+        <% end %>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= ion_icon "aperture" %> Galeria
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to videos_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-videocam" %> Videos
+          <% end %>
+          <%= link_to photos_path, :class => "dropdown-item" do %>
+            <%= ion_icon "images"%> Imagenes
+          <% end %>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= ion_icon "android-folder"%> Información
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to institutional_horizon_index_path, :class => "dropdown-item" do %>
+            <%= ion_icon "android-list" %> Horizonte Institucional
+          <% end %>
+          <%= link_to human_talent_index_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-people" %> Talento Humano
+          <% end %>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to contact_us_path, :class => "nav-link" do %>
+          <%= ion_icon "android-compass" %> Contactanos
+        <% end %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to pei_index_path, :class => "nav-link" do %>
+          <%= ion_icon "ios-albums" %> PEI
+        <% end %>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Otros
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to newspapers_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-paper" %> Periodico
+          <% end %>
+          <%= link_to news_index_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-list" %> Noticias
+          <% end %>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>

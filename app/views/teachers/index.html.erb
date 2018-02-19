@@ -1,0 +1,11 @@
+<div class="">
+  <%= render "partials/title" %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @teachers.each do |teacher| %>
+      <%= render :partial => "humanTalent", :collection => @teacher %>
+    <% end %>
+  </div>
+</div>

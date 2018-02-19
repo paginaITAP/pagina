@@ -1,0 +1,21 @@
+<div class="container">
+  <%= form_for(@teacher) do |f| %>
+    <label for="title" class="h3 top-30">Nombre del profesor</label>
+      <div class="form-group m-15">
+        <%= f.text_field :title, placeholder: "Nombre del profesor", class: "form-control form-control-lg", id: "title" %>
+      </div>
+
+    <label for="img" class="h3">Imagen <%= ion_icon "image" %> </label>
+      <div class="form-group m-15">
+        <%= f.text_field :img, placeholder: "Imagen del profesor", class: "form-control form-control-lg", id: "img" %>
+      </div>
+
+    <label for="body1" class="h3">Cuerpo del articulo</label>
+      <div class="form-group m-15">
+        <%= f.text_field :body, class: "form-control ", style: "height:350px;", id: "body1" %>
+      </div>
+
+    <%= f.submit "" %>
+
+    <%end%>
+</div>
