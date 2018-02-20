@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <%= link_to root_path, :class => "" do %>
     <%= image_tag('logo.png' ,:class => "", :width => "120") %>
   <% end %>
@@ -8,7 +8,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item active">
         <%= link_to root_path, :class => "nav-link" do %>
           <%= ion_icon "home"%> Inicio
@@ -75,12 +75,19 @@
         <% end %>
       </li>
 
-      <li class="nav-item">
-        <%= link_to pei_index_path, :class => "nav-link" do %>
-          <%= ion_icon "gear-b" %>
-        <% end %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= ion_icon "gear-b"%>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to newspapers_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-paper" %> Periodico
+          <% end %>
+          <%= link_to news_index_path, :class => "dropdown-item" do %>
+            <%= ion_icon "ios-list" %> Noticias
+          <% end %>
+        </div>
       </li>
-
     </ul>
   </div>
 </nav>
