@@ -1,0 +1,11 @@
+<%= form_for(x) do |f| %>
+  <div class="">
+    <%= f.text_field :title, placeholder: "Titulo del articulo"%>
+  </div>
+  <div class="">
+    <%= f.cktext_area :body, placeholder: "Titulo del articulo"%>
+  </div>
+  <div class="">
+    <%= f.submit "Guardar", class: "btn btn-info" %>
+  </div>
+<%end%>

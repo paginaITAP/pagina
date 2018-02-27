@@ -1,5 +1,5 @@
 <div class="">
-  <%= render "partials/title2" %>
+  <%= render "partials/title2", y: new_news_path %>
 </div>
 <div class="">
 
@@ -12,7 +12,7 @@
 
     <div class="row top-30 left-margin">
 
-      <%= render "partials/cards" %>
+      <%= render "partials/cards", x: @news %>
 
     </div>
   </div>

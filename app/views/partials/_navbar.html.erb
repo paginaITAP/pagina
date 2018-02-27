@@ -75,19 +75,25 @@
         <% end %>
       </li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= ion_icon "gear-b"%>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to newspapers_path, :class => "dropdown-item" do %>
-            <%= ion_icon "ios-paper" %> Periodico
-          <% end %>
-          <%= link_to news_index_path, :class => "dropdown-item" do %>
-            <%= ion_icon "ios-list" %> Noticias
-          <% end %>
-        </div>
-      </li>
+      <% if admin_signed_in? %>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= ion_icon "gear-b"%>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to newspapers_path, :class => "dropdown-item" do %>
+                <%= ion_icon "ios-paper" %> Periodico
+              <% end %>
+              <%= link_to news_index_path, :class => "dropdown-item" do %>
+                <%= ion_icon "ios-list" %> Noticias
+              <% end %>
+            </div>
+          </li>
+
+      <% end %>
+
     </ul>
   </div>
 </nav>

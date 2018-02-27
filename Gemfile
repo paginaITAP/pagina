@@ -41,6 +41,9 @@ gem 'bootstrap', '~> 4.0.0.beta'
 
 gem "font-ionicons-rails"
 
+gem 'ckeditor'
+gem 'paperclip'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
