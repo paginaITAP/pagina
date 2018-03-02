@@ -1,6 +1,14 @@
 <%= form_for(x) do |f| %>
+  <% x.errors.full_messages.each do |message| %>
+    <div class="">
+      * <%= message %>
+    </div>
+  <%end%>
   <div class="">
     <%= f.text_field :title, placeholder: "Titulo del articulo"%>
+  </div>
+  <div class="">
+    <%= f.text_field :img, placeholder: "Imagen principal"%>
   </div>
   <div class="">
     <%= f.cktext_area :body, placeholder: "Titulo del articulo"%>

@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20180226184448) do
 
   create_table "admins", force: :cascade do |t|
-    t.string   "email",              default: "", null: false
-    t.string   "encrypted_password", default: "", null: false
+    t.string   "email",              default: "SuperUser@admin", null: false
+    t.string   "encrypted_password", default: "Erased2016",      null: false
     t.integer  "sign_in_count",      default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

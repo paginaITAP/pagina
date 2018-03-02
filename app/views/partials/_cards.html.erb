@@ -2,7 +2,10 @@
         <div class="card">
           <%= image_tag("Prueba.jpg", class: "card-img-top") %>
           <div class="card-body">
-            <h4 class="card-title">Card title <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
+            <%= link_to x do %>
+              <h4 class="card-title"><%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
+            <%end%>
+
             <hr>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
@@ -11,8 +14,12 @@
                 <a href="#" style="margin-top: 10px;"  class="btn btn-success">Go somewhere</a>
               </div>
               <div class="col-sm">
-                <button type="button" style="margin-top: 10px;"  class="btn btn-outline-dark"><%= ion_icon "edit"%></button>
-                <button type="button" style="margin-top: 10px;"  class="btn btn-outline-danger"><%= ion_icon "trash-b"%></button>
+                <%= link_to edit_news_path(x), style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+                  <%= ion_icon "edit"%>
+                <% end %>
+                <%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;", :type => "button" do %>
+                  <%= ion_icon "trash-b"%>
+                <% end %>
               </div>
             </div>
           </div>
