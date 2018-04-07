@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   resources :pei
 
-  devise_for :admins
   devise_for :users
 
   resources :photos
