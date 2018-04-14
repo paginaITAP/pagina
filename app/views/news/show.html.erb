@@ -1,12 +1,1 @@
-<h1><%= @news.title %></h1>
-
-<div class="">
-  <%= raw @news.body %>
-</div>
-
-<%= link_to edit_news_path(@news), style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
-  <%= ion_icon "edit"%>
-<% end %>
-<%= link_to @news, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
-  <%= ion_icon "trash-b"%>
-<% end %>
+<%= render "partials/show", d: edit_news_path(@news) ,x: @news %>

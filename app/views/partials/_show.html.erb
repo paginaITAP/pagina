@@ -1,0 +1,12 @@
+<h1><%= x.title %></h1>
+
+<div class="">
+  <%= raw x.body %>
+</div>
+
+<%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+  <%= ion_icon "edit"%>
+<% end %>
+<%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
+  <%= ion_icon "trash-b"%>
+<% end %>

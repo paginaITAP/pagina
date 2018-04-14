@@ -1,5 +1,5 @@
 <div class="">
-  <%= render "partials/title2" %>
+  <%= render "partials/title2", y: new_photo_path %>
 </div>
 
 <div class="container">
@@ -9,7 +9,7 @@
 
     <div class="row top-30 left-margin">
 
-      <%= render "partials/cards" %>
+      <%= render "partials/cards",  x: @photo %>
 
     </div>
   </div>
