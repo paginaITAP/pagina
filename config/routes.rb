@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :photos
   resources :videos
 
-  resources :teachers
   resources :managers
 
   resources :news
