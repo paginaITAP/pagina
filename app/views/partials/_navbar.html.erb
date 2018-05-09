@@ -88,13 +88,16 @@
               <% end %>
               <div class="dropdown-divider"></div>
               <%= link_to newspapers_path, :class => "dropdown-item" do %>
-                <%= ion_icon "person" %> Perfil
+                <%= ion_icon "plus-circled" %> Horizonte Institucional
               <% end %>
               <%= link_to newspapers_path, :class => "dropdown-item" do %>
-                <%= ion_icon "person" %> Perfil
+                <%= ion_icon "plus-circled" %> Talento Humano
               <% end %>
               <div class="dropdown-divider"></div>
-              <%= link_to news_index_path, :class => "dropdown-item" do %>
+              <%= link_to news_index_path, :class => "dropdown-item " do %>
+                <%= ion_icon "gear-b" %> Configuraciones
+              <% end %>
+              <%= link_to news_index_path, :class => "dropdown-item " do %>
                 <%= ion_icon "heart-broken" %> Salir
               <% end %>
             </div>
