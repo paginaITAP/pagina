@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :news
   resources :newspapers
-  resources :human_talent
+  resources :teachers
   resources :institutional_horizon
   resources :contact_us
 

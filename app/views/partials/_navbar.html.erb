@@ -37,7 +37,7 @@
           <%= link_to institutional_horizon_index_path, :class => "dropdown-item" do %>
             <%= ion_icon "android-list" %> Horizonte Institucional
           <% end %>
-          <%= link_to human_talent_index_path, :class => "dropdown-item" do %>
+          <%= link_to teachers_path, :class => "dropdown-item" do %>
             <%= ion_icon "ios-people" %> Talento Humano
           <% end %>
         </div>
@@ -69,11 +69,35 @@
         </div>
       </li>
 
+      <% if user_signed_in? %>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= ion_icon "person"%>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to newspapers_path, :class => "dropdown-item" do %>
+                <%= ion_icon "person" %> Perfil
+              <% end %>
+
+              <div class="dropdown-divider"></div>
+
+              <%= link_to destroy_user_session_path, :method=>'delete', :class => "dropdown-item " do %>
+                <%= ion_icon "heart-broken" %> Salir
+              <% end %>
+            </div>
+          </li>
+
+      <%else%>
+
       <li class="nav-item">
         <%= link_to user_session_path, :class => "nav-link" do %>
           <%= ion_icon "person" %> Iniciar sesión
         <% end %>
       </li>
+
+      <% end %>
 
       <% if admin_signed_in? %>
 
@@ -90,14 +114,14 @@
               <%= link_to newspapers_path, :class => "dropdown-item" do %>
                 <%= ion_icon "plus-circled" %> Horizonte Institucional
               <% end %>
-              <%= link_to newspapers_path, :class => "dropdown-item" do %>
+              <%= link_to new_teacher_path, :class => "dropdown-item" do %>
                 <%= ion_icon "plus-circled" %> Talento Humano
               <% end %>
               <div class="dropdown-divider"></div>
               <%= link_to news_index_path, :class => "dropdown-item " do %>
                 <%= ion_icon "gear-b" %> Configuraciones
               <% end %>
-              <%= link_to news_index_path, :class => "dropdown-item " do %>
+              <%= link_to destroy_admin_session_path, :method=>'delete', :class => "dropdown-item " do %>
                 <%= ion_icon "heart-broken" %> Salir
               <% end %>
             </div>
