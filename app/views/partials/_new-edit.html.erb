@@ -10,16 +10,19 @@
       </div>
     <%end%>
 
-      <div class="d-flex" style="margin-top: 30px">
+      <div class="form_group" style="margin-top: 30px">
+        <label for="InputEmail1"><strong>Correo Electrónico</strong></label>
         <%= f.text_field :title, placeholder: "Titulo del articulo", class: "full-width"%>
       </div>
-      <div class="d-flex" style="margin-top: 5px">
+      <div class="form_group" style="margin-top: 5px">
+        <label for=""><strong>Imagen</strong></label>
         <%= f.text_field :img, placeholder: "Imagen principal", class: "full-width"%>
       </div>
       <div class="" style="margin-top: 5px">
+        <label for=""><strong>cuerpor del artículo</strong></label>
         <%= f.cktext_area :body, placeholder: "Titulo del articulo", class: "full-width"%>
       </div>
-      <div class="d-flex justify-content-end">
+      <div class="d-flex justify-content-end" style="margin-top: 7px">
         <%= f.submit "Guardar", class: "btn btn-info" %>
 
       </div>
