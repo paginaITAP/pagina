@@ -79,15 +79,23 @@
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= ion_icon "gear-b"%>
+              <%= ion_icon "wrench"%>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to newspapers_path, :class => "dropdown-item" do %>
-                <%= ion_icon "ios-paper" %> Periodico
+                <%= ion_icon "person" %> Perfil
               <% end %>
+              <div class="dropdown-divider"></div>
+              <%= link_to newspapers_path, :class => "dropdown-item" do %>
+                <%= ion_icon "person" %> Perfil
+              <% end %>
+              <%= link_to newspapers_path, :class => "dropdown-item" do %>
+                <%= ion_icon "person" %> Perfil
+              <% end %>
+              <div class="dropdown-divider"></div>
               <%= link_to news_index_path, :class => "dropdown-item" do %>
-                <%= ion_icon "ios-list" %> Noticias
+                <%= ion_icon "heart-broken" %> Salir
               <% end %>
             </div>
           </li>
