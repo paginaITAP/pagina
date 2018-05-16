@@ -14,7 +14,7 @@ class NewsController < ApplicationController
   end
 
   def create #Post
-    @news = News.new(news_params)
+    @news = current_admin.news.new(news_params)
 
     if @news.save
       redirect_to @news

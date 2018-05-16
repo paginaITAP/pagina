@@ -12,7 +12,7 @@ class NewspapersController < ApplicationController
   end
 
   def create #Post
-    @newspaper = Newspaper.new(newspaper_params)
+    @newspaper = current_admin.newspaper.new(newspaper_params)
 
     if @newspaper.save
       redirect_to @newspaper

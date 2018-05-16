@@ -1,6 +1,10 @@
 <h1><%= x.title %></h1>
 
 <div class="">
+  <% unless x.admin.nil? %>
+    <p>Escrito por: "<%= x.admin.email %>"</p>
+  <%end%>
+
   <%= raw x.body %>
 </div>
 
