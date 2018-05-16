@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   resources :news
   resources :newspapers
   resources :teachers
-  resources :institutional_horizon
   resources :contact_us
 
   root 'home#index'
