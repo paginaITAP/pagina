@@ -11,14 +11,27 @@
         <div class="col-sm">
           <a href="#" style="margin-top: 10px;"  class="btn btn-success">Go somewhere</a>
         </div>
+<<<<<<< HEAD
         <div class="col-sm">
           <div class="btn btn-outline-dark justify-content-end" style= "margin-top: 10px; ">
             <%= ion_icon "edit"%>
           </div>
           <div class="btn btn-outline-danger" style = "margin-top: 10px;">
             <%= ion_icon "trash-b"%>
+=======
+
+        <% if admin_signed_in? %>
+          <div class="col-sm">
+            <div class="btn btn-outline-dark" style= "margin-top: 10px;">
+              <%= ion_icon "edit"%>
+            </div>
+            <div class="btn btn-outline-danger" style = "margin-top: 10px;">
+              <%= ion_icon "trash-b"%>
+            </div>
+>>>>>>> f6a469d5a885260c6a5689c18a229b4ed01ec82c
           </div>
-        </div>
+        <% end %>
+
       </div>
     </div>
   </div>

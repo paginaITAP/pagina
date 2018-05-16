@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
     @videos = Video.all
   end
@@ -12,7 +14,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new(video_params)
+    @video = current_admin.video.new(video_params)
 
     if @video.save
       redirect_to @video

@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
     @teachers = Teacher.all
   end
@@ -12,7 +14,7 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(photo_params)
+    @teacher = current_admin.teacher.new(photo_params)
 
     if @teacher.save
       redirect_to @teacher

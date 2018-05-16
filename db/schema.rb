@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516125019) do
+ActiveRecord::Schema.define(version: 20180516132114) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -56,6 +56,10 @@ ActiveRecord::Schema.define(version: 20180516125019) do
     t.integer  "visits_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "admin_id"
+    t.integer  "user_id"
+    t.index ["admin_id"], name: "index_news_on_admin_id"
+    t.index ["user_id"], name: "index_news_on_user_id"
   end
 
   create_table "newspapers", force: :cascade do |t|
@@ -65,6 +69,10 @@ ActiveRecord::Schema.define(version: 20180516125019) do
     t.integer  "visits_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "admin_id"
+    t.integer  "user_id"
+    t.index ["admin_id"], name: "index_newspapers_on_admin_id"
+    t.index ["user_id"], name: "index_newspapers_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -74,6 +82,10 @@ ActiveRecord::Schema.define(version: 20180516125019) do
     t.integer  "visits_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "admin_id"
+    t.integer  "user_id"
+    t.index ["admin_id"], name: "index_photos_on_admin_id"
+    t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -83,6 +95,10 @@ ActiveRecord::Schema.define(version: 20180516125019) do
     t.integer  "visits_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "admin_id"
+    t.integer  "user_id"
+    t.index ["admin_id"], name: "index_teachers_on_admin_id"
+    t.index ["user_id"], name: "index_teachers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -109,6 +125,10 @@ ActiveRecord::Schema.define(version: 20180516125019) do
     t.integer  "visits_count"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "admin_id"
+    t.integer  "user_id"
+    t.index ["admin_id"], name: "index_videos_on_admin_id"
+    t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
 end
