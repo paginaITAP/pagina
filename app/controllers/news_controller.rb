@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
   def index
     #Obtiene todos los registros en la tabla
     @news = News.all

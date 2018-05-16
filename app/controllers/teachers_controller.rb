@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
     @teachers = Teacher.all
   end

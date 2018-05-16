@@ -1,4 +1,6 @@
 class NewspapersController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
   def index
     @newspapers = Newspaper.all
   end
