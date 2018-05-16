@@ -1,37 +1,76 @@
 <% map = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.8411734322972!2d-73.22322749894828!3d6.635521829892662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69cf7c0649c981%3A0x1cccf0352187398f!2sInstituto+T%C3%A9cnico+Aquileo+Parra!5e0!3m2!1ses!2sco!4v1511122757985";%>
-
 <div class="">
   <%= render "partials/title" %>
 </div>
 
-<div class="container top-30">
-  <div class="row">
-    <div class="col-md Datos" style="margin-bottom: 25px;">
-      <div class="">
+<div class="container">
+
+<div class="row">
+  <div class="form_wrap">
+
+    <div class="contact_info">
+
+      <div class="info_title">
+
+        <span class="icon_contact">
+           <ion-icon name="contact"></ion-icon>
+        </span>
+        <h2>INFORMACIÓN <br> DE CONTACTO</h2>
 
       </div>
-      <div class="title bg-success text-white">
+
+      <div class="info_items">
+
+        <span class="mail">
+          <ion-icon name="mail"></ion-icon>
+        </span>
+        <span class="facebook">
+          <ion-icon name="facebook"></ion-icon>
+        </span>
+        <span class="twitter">
+          <ion-icon name="twitter"></ion-icon>
+        </span>
+        <span class="youtube">
+          <ion-icon name="youtube"></ion-icon>
+        </span>
 
       </div>
     </div>
 
-    <div class="col-md Formulario" style="margin-bottom: 25px;">
-      <div class="">
-        <h2 class="title bg-success text-white" style="width: 100%;text-align: center;"> Formulario</h2>
-      </div>
-      <div class="contenedor-formulario">
+    <form class="form_contact" action="index.html" method="post">
+
+      <h2>envía un mensaje</h2>
+
+      <div class="user_info">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+
+        <label for="nombre">Telefono</label>
+        <input type="text" id="Telefono">
+
+        <label for="nombre">Correo Electrónico</label>
+        <input type="text" id="Correo_Electrónico">
+        
+        <label for="nombre">Mensaje</label>
+        <textarea id="Mensaje"></textarea>
+
+        <input type="button" value="enviar mensaje" id="btnSend">
 
       </div>
-    </div>
+
+    </form>
 
   </div>
-  <div class="row">
 
+<!----------------
+  <div class="row">
     <h1  style="width: 100%;text-align: center;"> <%= ion_icon "map", text: "Mapa" %> </h1>
     <br><hr style="width: 100%;"></br>
-    <iframe class="maps" src= "<%= map %>"
-      width="100%" height="500" frameborder="0" style="border:0" allowfullscreen>
+    <iframe class="maps" src= "<%= map %>"width="100%" height="500" frameborder="0" style="border:0" allowfullscreen>
     </iframe>
-
   </div>
+------------------>
+</div>
+
 </div>

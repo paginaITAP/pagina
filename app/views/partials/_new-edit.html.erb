@@ -3,7 +3,7 @@
 <div class="container" >
 
   <%= form_for(x) do |f| %>
-  <% x.errors.full_messages.each do |message| %>
+    <% x.errors.full_messages.each do |message| %>
 
       <div class="">
         * <%= message %>
@@ -26,5 +26,5 @@
         <%= f.submit "Guardar", class: "btn btn-info" %>
 
       </div>
-    <%end%>
+  s<%end%>
 </div>
