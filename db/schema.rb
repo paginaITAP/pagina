@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516132114) do
+ActiveRecord::Schema.define(version: 20180516164409) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",              default: "", null: false
@@ -38,6 +38,26 @@ ActiveRecord::Schema.define(version: 20180516132114) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "admin_id"
+    t.integer  "news_id"
+    t.integer  "newspapers_id"
+    t.integer  "photos_id"
+    t.integer  "teachers_id"
+    t.integer  "videos_id"
+    t.text     "body"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["admin_id"], name: "index_comments_on_admin_id"
+    t.index ["news_id"], name: "index_comments_on_news_id"
+    t.index ["newspapers_id"], name: "index_comments_on_newspapers_id"
+    t.index ["photos_id"], name: "index_comments_on_photos_id"
+    t.index ["teachers_id"], name: "index_comments_on_teachers_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["videos_id"], name: "index_comments_on_videos_id"
   end
 
   create_table "managers", force: :cascade do |t|
