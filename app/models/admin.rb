@@ -7,4 +7,6 @@ class Admin < ActiveRecord::Base
   has_many :photo
   has_many :teacher
 
+  has_many :comments
+
 end

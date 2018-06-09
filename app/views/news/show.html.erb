@@ -1,3 +1,14 @@
 <div class="container">
   <%= render "partials/show", d: edit_news_path(@news) ,x: @news %>
+  <div class="">
+    <h3>Comentarios</h3>
+    <%= render "comments/form"%>
+  </div>
+  <ul>
+    <% @news.comments.each do |comment|%>
+      <li>
+        <%= comment.body %> - <%= comment.admin.email%>
+      </li>
+    <% end %>
+  </ul>
 </div>

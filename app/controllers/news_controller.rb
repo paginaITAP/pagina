@@ -8,6 +8,7 @@ class NewsController < ApplicationController
   def show
     #Encontrar un rigistro por id
     @news = News.find(params[:id])
+    @comment = Comment.new
   end
 
   def new

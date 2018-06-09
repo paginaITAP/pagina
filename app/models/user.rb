@@ -8,4 +8,6 @@ class User < ApplicationRecord
    has_many :video
    has_many :photo
    has_many :teacher
+
+   has_many :comments
 end
