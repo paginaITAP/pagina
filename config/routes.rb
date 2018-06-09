@@ -1,20 +1,26 @@
 Rails.application.routes.draw do
 
-  resources :comments
   devise_for :users
   devise_for :admins
 
   mount Ckeditor::Engine => '/ckeditor'
 
+
+  resources :photos do
+    resources :comments
+  end
+  resources :videos do
+    resources :comments
+  end
+  resources :news do
+    resources :comments
+  end
+  resources :newspapers do
+    resources :comments
+  end
+
   resources :pei
-
-  resources :photos
-  resources :videos
-
   resources :managers
-
-  resources :news
-  resources :newspapers
   resources :teachers
   resources :contact_us
 
