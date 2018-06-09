@@ -25,10 +25,7 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    if admin_signed_in?
       @comment = current_admin.comments.new(comment_params)
-    
-    end
 
     @comment.news = @news
 
