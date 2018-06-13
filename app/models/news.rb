@@ -1,6 +1,5 @@
 class News < ApplicationRecord
   belongs_to :admin
-  belongs_to :user
   has_many :comments
 
 
