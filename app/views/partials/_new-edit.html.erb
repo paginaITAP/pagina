@@ -2,7 +2,7 @@
 
 <div class="container" >
 
-  <%= form_for(x) do |f| %>
+  <%= form_for(x, html:{class:"w-100"}) do |f| %>
     <% x.errors.full_messages.each do |message| %>
 
       <div class="">
