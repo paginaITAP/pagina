@@ -22,6 +22,21 @@
         <label for=""><strong>cuerpor del artículo</strong></label>
         <%= f.cktext_area :body, placeholder: "Titulo del articulo", class: "full-width"%>
       </div>
+      <%if ver == "noticias"%>
+        <% categorias = {'Titulares' => 1, 'Noticias' => 2} %>
+        <label for="">categorias:</label>
+        <div class="btn-group btn-group-toggle", data-toggle="buttons">
+          <% lista = categorias.sort %>
+          <% lista.each do |categoria| %>
+              <label class="btn btn-outline-dark" for="<%= categoria[1]%>">
+                <%=  f.radio_button :category, categoria[1] %>
+                <%=categoria[0]%>
+              </label>
+          <%end%>
+        </div>
+      <%else%>
+
+      <%end%>
       <div class="d-flex justify-content-end" style="margin-top: 7px">
         <%= f.submit "Guardar", class: "btn btn-info" %>
 

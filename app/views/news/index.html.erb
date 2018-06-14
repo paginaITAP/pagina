@@ -3,7 +3,7 @@
 </div>
 <div class="">
 
-<%= render "partials/titulares" %>
+<%= render "partials/titulares", x: @news %>
 
 <div class="container">
   <div class="top-30">
@@ -12,7 +12,7 @@
 
     <div class="row top-30 left-margin">
 
-      <%= render "partials/cards", x: @news %>
+      <%= render "partials/cards", x: @news, ver: "noticias", d: edit_news_path(@news) %>
 
     </div>
   </div>

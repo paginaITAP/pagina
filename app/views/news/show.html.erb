@@ -1,5 +1,6 @@
 <div class="container">
   <%= render "partials/show", d: edit_news_path(@news) ,x: @news %>
+  <%= @news.category %>
   <div class="">
     <h3>Comentarios</h3>
     <%= render "comments/form"%>

@@ -1,34 +1,22 @@
 <div class="container">
-  
+
   <!-- Inicio de Titulares -->
     <div class="top-30">
       <h1>Titulares</h1>
       <hr>
 
       <div class="row top-30 left-margin">
-
-        <div class="col-md-4 botton-15 ">
-          <h2>Title</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-          <p>
-            <a class="btn btn-danger" href="#">View new</a>
-          </p>
-        </div>
-        <div class="col-md-4 botton-15 ">
-          <h2>Title</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-          <p>
-            <a class="btn btn-danger" href="#">View new</a>
-          </p>
-        </div>
-        <div class="col-md-4 botton-15 ">
-          <h2>Title</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-          <p>
-            <a class="btn btn-danger" href="#">View new</a>
-          </p>
-        </div>
-
+        <% x.each do |titulares|%>
+          <% if titulares.category == 1 %>
+          <div class="col-md-4 botton-15 ">
+            <h2> <%= titulares.title%></h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            <p>
+              <a class="btn btn-danger" href="#">View new</a>
+            </p>
+          </div>
+          <%end %>
+        <%end%>
       </div>
     </div>
 
