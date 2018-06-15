@@ -1,7 +1,8 @@
-<div class="col-md-4 botton-15">
+
   <% if ver = "noticias" %>
   <%  x.each do |x|%>
    <%if x.category == 2%>
+   <div class="col-md-4 botton-15">
     <div class="card">
       <%= image_tag( x.img, class: "card-img-top") %>
       <div class="card-body">
@@ -26,7 +27,7 @@
         </div>
       </div>
     </div>
+    </div>
   <% end %>
 <% end %>
 <% end %>
-</div>
