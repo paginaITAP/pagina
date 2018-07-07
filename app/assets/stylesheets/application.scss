@@ -14,7 +14,7 @@
 
  /* importar todos los estilos de bootstrap */
  @import "bootstrap";
- @import "ionicons";
+
 
  /*importar estilos*/
  @import "contact_us";
@@ -25,6 +25,17 @@
 
  @import "estilos/pages/slider";
  @import "estilos/pages/photos";
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Open+Sans');
+
+ h1, h2, h3, h4, h5, h6, nav {
+   font-family: 'Baloo Bhai', cursive;
+ }
+
+ p {
+   font-family: 'open Sans' cursive;
+ }
+
 
  .title_img {
    display: block;

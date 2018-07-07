@@ -10,8 +10,8 @@ end
 gem 'rails', '~> 5.0.5'
 
 #comentar a la hora de subir a heroku
-#gem 'listen', '~> 3.0.5'
-#gem 'sqlite3'
+gem 'listen', '~> 3.0.5'
+gem 'sqlite3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -42,7 +42,6 @@ gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
-gem "font-ionicons-rails"
 
 gem 'ckeditor'
 gem 'paperclip'
@@ -66,7 +65,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
 
