@@ -42,7 +42,6 @@ gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0.beta'
 
-gem "font-ionicons-rails"
 
 gem 'ckeditor'
 gem 'paperclip'
@@ -66,7 +65,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  #gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
 
