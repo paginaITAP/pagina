@@ -10,8 +10,8 @@ end
 gem 'rails', '~> 5.0.5'
 
 #comentar a la hora de subir a heroku
-#gem 'listen', '~> 3.0.5'
-#gem 'sqlite3'
+gem 'listen', '~> 3.0.5'
+gem 'sqlite3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -56,7 +56,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 
-  #descomentas cuando se suba a heroku
+  #comentas cuando se suba a heroku
   #gem 'listen', '~> 3.0.5'
   #gem 'sqlite3'
 
