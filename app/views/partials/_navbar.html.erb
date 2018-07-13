@@ -11,19 +11,23 @@
     <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item active">
         <%= link_to root_path, :class => "nav-link" do %>
+        <ion-icon name="home"></ion-icon>
         Inicio
         <% end %>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <ion-icon name="aperture"></ion-icon>
          Galeria
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to videos_path, :class => "dropdown-item" do %>
+          <ion-icon name="film"></ion-icon>
            Videos
           <% end %>
           <%= link_to photos_path, :class => "dropdown-item" do %>
+          <ion-icon name="images"></ion-icon>
              Imagenes
           <% end %>
         </div>
@@ -31,13 +35,16 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <ion-icon name="folder"></ion-icon>
           Información
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to information_index_path, :class => "dropdown-item" do %>
+            <ion-icon name="school"></ion-icon>
             Horizonte Institucional
           <% end %>
           <%= link_to teachers_path, :class => "dropdown-item" do %>
+             <ion-icon name="people"></ion-icon>
              Talento Humano
           <% end %>
         </div>
@@ -45,22 +52,26 @@
 
       <li class="nav-item">
         <%= link_to contact_us_path, :class => "nav-link" do %>
+           <ion-icon name="send"></ion-icon>
            Contactanos
         <% end %>
       </li>
 
       <li class="nav-item">
         <%= link_to pei_index_path, :class => "nav-link" do %>
+           <ion-icon name="filing"></ion-icon>
            PEI
         <% end %>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <ion-icon name="more"></ion-icon>
           Otros
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to newspapers_path, :class => "dropdown-item" do %>
+          <ion-icon name="paper"></ion-icon>
            Periodico
           <% end %>
           <%= link_to news_index_path, :class => "dropdown-item" do %>
@@ -78,6 +89,7 @@
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <%= link_to newspapers_path, :class => "dropdown-item" do %>
+               <ion-icon name="contact"></ion-icon>
                 Perfil
               <% end %>
 
