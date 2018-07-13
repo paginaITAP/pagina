@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :information
   devise_for :users
   devise_for :admins
 
@@ -20,7 +21,6 @@ Rails.application.routes.draw do
   end
 
   resources :pei
-  resources :managers
   resources :teachers
   resources :contact_us
 
