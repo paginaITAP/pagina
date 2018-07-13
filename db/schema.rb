@@ -68,6 +68,15 @@ ActiveRecord::Schema.define(version: 20180711183114) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "managers", force: :cascade do |t|
+    t.string   "title"
+    t.text     "img"
+    t.text     "body"
+    t.integer  "visits_count"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "news", force: :cascade do |t|
     t.string   "title"
     t.text     "img"
