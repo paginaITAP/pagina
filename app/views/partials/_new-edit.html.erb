@@ -11,8 +11,13 @@
     <%end%>
 
       <div class="form_group" style="margin-top: 30px">
-        <label for="InputEmail1"><strong>NOMBRE DEL ARTÍCULO</strong></label>
-        <%= f.text_field :title, placeholder: "Titulo del articulo", class: "full-width"%>
+        <% if ver == "profes" %>
+          <label for="InputEmail1"><strong>NOMBRE DEL PROFESOR</strong></label>
+          <%= f.text_field :name, placeholder: "Titulo del articulo", class: "full-width"%>
+        <% else %>
+          <label for="InputEmail1"><strong>NOMBRE DEL ARTÍCULO</strong></label>
+          <%= f.text_field :title, placeholder: "Titulo del articulo", class: "full-width"%>
+        <% end %>
       </div>
       <div class="form_group" style="margin-top: 5px">
         <label for=""><strong>Imagen</strong></label>

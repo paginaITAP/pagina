@@ -1,18 +1,38 @@
   <div class="w-100 d-flex justify-content-center">
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
-      </li>
-    </ul>
+    <% if ver == "info" %>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-historia-tab" data-toggle="pill" href="#pills-historia" role="tab" aria-controls="pills-historia" aria-selected="true">Historia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-himno-tab" data-toggle="pill" href="#pills-himno" role="tab" aria-controls="pills-himno" aria-selected="false">Himno</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-Mv-tab" data-toggle="pill" href="#pills-Mv" role="tab" aria-controls="pills-Mv" aria-selected="false">Mision y Vision</a>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+    <% end %>
   </div>
   <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Hola  </div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    <% if ver == "info" %>
+      <div class="tab-pane fade show active" id="pills-historia" role="tabpanel" aria-labelledby="pills-historia-tab">Historia de la institucion</div>
+      <div class="tab-pane fade" id="pills-himno" role="tabpanel" aria-labelledby="pills-himno-tab">Himno de la institucion...  </div>
+      <div class="tab-pane fade" id="pills-Mv" role="tabpanel" aria-labelledby="pills-Mv-tab">La mision y vision de la instition esta...</div>
+    <% else %>
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Hola  </div>
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    <% end %>
   </div>
