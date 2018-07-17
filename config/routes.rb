@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :information
+  resources :information, except: [:show]
   devise_for :users
   devise_for :admins
 
