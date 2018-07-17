@@ -52,8 +52,6 @@ background: linear-gradient(to top, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Fir
   width: 40%;
   position: relative;
 
-//.. imagen =====================    background-image: ;
-
   justify-content: center;
   background-size: cover;
   background-position: center center;
@@ -94,9 +92,12 @@ background: linear-gradient(to top, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Fir
 }
 
 
-.mail, .facebook, .youtube, .twitter{
-  font-size: 20px;
+.facebook, .youtube, .twitter{
+  font-size: 30px;
   margin-left: 5px;
+  color: white;
+
+  margin-bottom: 0px;
 }
 
 //_____________________________________________user_info__________________________________________________________________________________________
@@ -239,8 +240,8 @@ form.form_contact input[type="button"]:hover{
 
 .social{
   display: flex;
-  text-align: center;
   justify-content: center;
+  margin-top: 50px;
 
 }
 
