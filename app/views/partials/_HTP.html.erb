@@ -1,3 +1,5 @@
+
+
   <div class="w-100 d-flex justify-content-center">
     <% if ver == "info" %>
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -31,16 +33,26 @@
        <%if x.category == 1%>
         <div class="tab-pane fade" id="pills-himno" role="tabpanel" aria-labelledby="pills-himno-tab">
             <%= x.body%>
+            <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+            <ion-icon name="create"></ion-icon>
+            <% end %>
          </div>
        <% elsif x.category == 2 %>
         <div class="tab-pane fade show active" id="pills-historia" role="tabpanel" aria-labelledby="pills-historia-tab">
           <%= x.body%>
+          <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+            <ion-icon name="create"></ion-icon>
+          <% end %>
         </div>
        <%elsif x.category == 3%>
         <div class="tab-pane fade" id="pills-Mv" role="tabpanel" aria-labelledby="pills-Mv-tab">
           <%= x.body%>
+          <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+            <ion-icon name="create"></ion-icon>
+          <% end %>
         </div>
        <%else%>
+       
        <% end %>
       <% end %>
     <% else %>
