@@ -27,9 +27,22 @@
   </div>
   <div class="tab-content" id="pills-tabContent">
     <% if ver == "info" %>
-      <div class="tab-pane fade show active" id="pills-historia" role="tabpanel" aria-labelledby="pills-historia-tab">Historia de la institucion</div>
-      <div class="tab-pane fade" id="pills-himno" role="tabpanel" aria-labelledby="pills-himno-tab">Himno de la institucion...  </div>
-      <div class="tab-pane fade" id="pills-Mv" role="tabpanel" aria-labelledby="pills-Mv-tab">La mision y vision de la instition esta...</div>
+      <%  x.each do |x|%>
+       <%if x.category == 1%>
+        <div class="tab-pane fade" id="pills-himno" role="tabpanel" aria-labelledby="pills-himno-tab">
+            <%= x.body%>
+         </div>
+       <% elsif x.category == 2 %>
+        <div class="tab-pane fade show active" id="pills-historia" role="tabpanel" aria-labelledby="pills-historia-tab">
+          <%= x.body%>
+        </div>
+       <%elsif x.category == 3%>
+        <div class="tab-pane fade" id="pills-Mv" role="tabpanel" aria-labelledby="pills-Mv-tab">
+          <%= x.body%>
+        </div>
+       <%else%>
+       <% end %>
+      <% end %>
     <% else %>
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Hola  </div>
