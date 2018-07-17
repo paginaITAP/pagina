@@ -14,19 +14,32 @@
         <% if ver == "profes" %>
           <label for="InputEmail1"><strong>NOMBRE DEL PROFESOR</strong></label>
           <%= f.text_field :name, placeholder: "Titulo del articulo", class: "full-width"%>
+        <% elsif ver == "info" %>
+
         <% else %>
           <label for="InputEmail1"><strong>NOMBRE DEL ARTÍCULO</strong></label>
           <%= f.text_field :title, placeholder: "Titulo del articulo", class: "full-width"%>
         <% end %>
       </div>
-      <div class="form_group" style="margin-top: 5px">
-        <label for=""><strong>Imagen</strong></label>
-        <%= f.text_field :img, placeholder: "Imagen principal", class: "full-width"%>
-      </div>
+      <% if ver == "info"%>
+
+      <%else%>
+        <div class="form_group" style="margin-top: 5px">
+          <label for=""><strong>Imagen</strong></label>
+          <%= f.text_field :img, placeholder: "Imagen principal", class: "full-width"%>
+        </div>
+      <%end%>
+
+
       <div class="" style="margin-top: 5px">
-        <label for=""><strong>cuerpor del artículo</strong></label>
-        <%= f.cktext_area :body, placeholder: "Titulo del articulo", class: "full-width"%>
+        <%if ver == "info"%>
+          <%= f.cktext_area :body, placeholder: "Titulo del articulo", class: "full-width"%>
+        <%else%>
+          <label for=""><strong>cuerpor del artículo</strong></label>
+          <%= f.cktext_area :body, placeholder: "Titulo del articulo", class: "full-width"%>
+        <%end%>
       </div>
+
       <%if ver == "noticias"%>
         <% categorias = {'Titulares' => 1, 'Noticias' => 2} %>
         <label for="">categorias:</label>
@@ -39,6 +52,20 @@
               </label>
           <%end%>
         </div>
+      <%elsif ver == "info"%>
+
+        <% categorias = {'Himno' => 1, 'Historia' => 2, 'Mision y Vision' => 3} %>
+        <label for="">categorias:</label>
+        <div class="btn-group btn-group-toggle", data-toggle="buttons">
+          <% lista = categorias.sort %>
+          <% lista.each do |categoria| %>
+              <label class="btn btn-outline-dark" for="<%= categoria[1]%>">
+                <%=  f.radio_button :category, categoria[1] %>
+                <%=categoria[0]%>
+              </label>
+          <%end%>
+        </div>
+
       <%else%>
 
       <%end%>
