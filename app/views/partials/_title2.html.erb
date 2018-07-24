@@ -1,9 +1,11 @@
 <div class="carousel-inner  botton-15", style="max-height: 350px;">
-  <%= image_tag("Prueba.jpg", class: "title_img img-fluid") %>  
-    <div class="">
-      <h4 class="display-4"> Titulo de la seccion </h4>
+  <%= image_tag("Prueba.jpg", class: "card-img title_img img-fluid") %>
+    <div class="card-img-overlay" style="margin-top:40px; color: white">
+      <h4 class="display-4 " style="text-align: center;"> Titulo de la seccion </h4>
       <p class="big-p2" style="text-align: center;"> Texto del la seccion </p>
-      <a href="#" class="btn btn-info">Ver</a>
+      <div class="d-flex justify-content-center">
+        <a href="#" class="btn btn-info">Ver</a>
+      </div>
 
       <% if  admin_signed_in? %>
       <div class="d-flex flex-row-reverse">
