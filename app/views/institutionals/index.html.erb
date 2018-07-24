@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Institutionals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Icon</th>
+      <th>Body</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @institutionals.each do |institutional| %>
+      <tr>
+        <td><%= institutional.title %></td>
+        <td><%= institutional.icon %></td>
+        <td><%= institutional.body %></td>
+        <td><%= institutional.category %></td>
+        <td><%= link_to 'Show', institutional %></td>
+        <td><%= link_to 'Edit', edit_institutional_path(institutional) %></td>
+        <td><%= link_to 'Destroy', institutional, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Institutional', new_institutional_path %>

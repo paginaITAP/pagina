@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @institutional.title %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @institutional.icon %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @institutional.body %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @institutional.category %>
+</p>
+
+<%= link_to 'Edit', edit_institutional_path(@institutional) %> |
+<%= link_to 'Back', institutionals_path %>

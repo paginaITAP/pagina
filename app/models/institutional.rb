@@ -1,0 +1,2 @@
+class Institutional < ApplicationRecord
+end

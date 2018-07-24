@@ -1,0 +1,2 @@
+module InstitutionalsHelper
+end

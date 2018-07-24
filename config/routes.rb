@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :institutionals
+  resources :achivements
+  resources :talents
   resources :information, except: [:show]
   devise_for :users
   devise_for :admins

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Achivements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Icon</th>
+      <th>Body</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @achivements.each do |achivement| %>
+      <tr>
+        <td><%= achivement.title %></td>
+        <td><%= achivement.icon %></td>
+        <td><%= achivement.body %></td>
+        <td><%= achivement.category %></td>
+        <td><%= link_to 'Show', achivement %></td>
+        <td><%= link_to 'Edit', edit_achivement_path(achivement) %></td>
+        <td><%= link_to 'Destroy', achivement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Achivement', new_achivement_path %>
