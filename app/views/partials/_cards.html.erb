@@ -1,31 +1,64 @@
 <%  x.each do |x|%>
-  <% if x.category == 2%>
-   <div class="col-md-4 botton-15">
-    <div class="card">
-      <%= image_tag( x.img, class: "card-img-top") %>
-      <div class="card-body">
-          <h4 class="card-title"> <%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
 
-        <hr>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <% if ver == "noticias"%>
+   <%if x.category == 2%>
+     <div class="col-md-4 botton-15">
+      <div class="card">
+        <%= image_tag( x.img, class: "card-img-top") %>
+        <div class="card-body">
+            <h4 class="card-title"> <%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
 
-        <div class="row">
-          <div class="col-sm">
-            <a href="#" style="margin-top: 10px;"  class="btn btn-success">Go somewhere</a>
+          <hr>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+          <div class="row">
+            <div class="col-sm">
+              <a href="#" style="margin-top: 10px;"  class="btn btn-success">Go somewhere</a>
+            </div>
+            <% if admin_signed_in? %>
+              <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+                <ion-icon name="create"></ion-icon>
+              <% end %>
+              <%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
+                <ion-icon name="trash"></ion-icon>
+              <% end %>
+            <% end %>
+
           </div>
-          <% if admin_signed_in? %>
-            <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
-              <ion-icon name="create"></ion-icon>
-            <% end %>
-            <%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
-              <ion-icon name="trash"></ion-icon>
-            <% end %>
-          <% end %>
-
         </div>
       </div>
-    </div>
-    </div>
-  <%elsif ver == "fotos"%>
+      </div>
+    <%end%>
+
+  <%elsif ver == "fotos" or ver == "videos"%>
+    <div class="col-md-4 botton-15">
+     <div class="card">
+       <%= image_tag( x.img, class: "card-img-top") %>
+       <div class="card-body">
+
+           <h4 class="card-title"> <%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
+
+         <hr>
+         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+         <div class="row">
+           <div class="col-sm">
+             <a href="#" style="margin-top: 10px;"  class="btn btn-success">Go somewhere</a>
+           </div>
+           <% if admin_signed_in? %>
+             <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
+               <ion-icon name="create"></ion-icon>
+             <% end %>
+             <%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
+               <ion-icon name="trash"></ion-icon>
+             <% end %>
+           <% end %>
+
+         </div>
+       </div>
+     </div>
+     </div>
+  <%else%>
+
   <% end %>
  <% end %>
