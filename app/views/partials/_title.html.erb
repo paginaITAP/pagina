@@ -13,6 +13,10 @@
         <h1 class="display-4" style="font-weight: bold;"> pei </h1>
         <p class="" style="text-align: center;"> Aquí podrás encontrar información acerca de nuestra institución </p>
       <%else%>
+        <h1 class="display-4" style="font-weight: bold;"> <%= x.title %> </h1>
+        <% unless x.admin.nil? %>
+          <p class="" style="text-align: center;"> Escrito por: "<%= x.admin.email %>" </p>
+        <%end%>
       <%end %>
     </div>
   </div>

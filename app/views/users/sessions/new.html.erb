@@ -1,6 +1,6 @@
-<h2 class="text-center">Iniciar Sesión</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name),html: {class:"w-100"}) do |f| %>
+<div class="" style="max-width: 600px;">
+  <h2 class="text-center">Iniciar Sesión</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: {class:"w-100"}) do |f| %>
   <div class="form-group ">
     <%= f.label :email %>
     <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email", placeholder: "email@example.com" %>
@@ -13,10 +13,12 @@
 
   <div class="actions d-flex justify-content-center">
     <%= f.submit "Log in", class: "btn text-light", style: "background: #00B4DB;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-"%>
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    "%>
   </div>
-<% end %>
+  <% end %>
 
-<%= render "users/shared/links" %>
+  <%= render "users/shared/links" %>
+
+</div>
