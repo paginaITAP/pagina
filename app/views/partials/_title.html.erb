@@ -2,8 +2,14 @@
   <%= image_tag("Prueba.jpg", class: "title_img img-fluid") %>
   <div class="title_p">
     <div class="">
-      <h1 class="display-4" style="font-weight: bold;"> Titulo de la seccion </h1>
-      <p class="" style="text-align: center;"> Texto del la seccion </p>
+      <%if ver == "contact"%>
+        <h1 class="display-4" style="font-weight: bold;"> Contactanos </h1>
+        <p class="" style="text-align: center;"> Texto del la seccion </p>
+      <%end %>
+      <%if ver == "INFORMACIÓN"%>
+        <h1 class="display-4" style="font-weight: bold;"> Sobre nosotros </h1>
+        <p class="" style="text-align: center;"> Aquí podrás encontrar información acerca de nuestra institución </p>
+      <%end %>
     </div>
   </div>
 </div>
