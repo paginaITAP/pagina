@@ -4,7 +4,7 @@
    <%if x.category == 2%>
      <div class="col-md-4 botton-15">
       <div class="card">
-        <%= image_tag( x.img, class: "card-img-top") %>
+        <%= image_tag( x.img, class: "card-img-top i_card") %>
         <div class="card-body">
             <h4 class="card-title"> <%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
 
@@ -33,7 +33,7 @@
   <%elsif ver == "fotos" or ver == "videos"%>
     <div class="col-md-4 botton-15">
      <div class="card">
-       <%= image_tag( x.img, class: "card-img-top") %>
+       <%= image_tag( x.img, class: "card-img-top i_card") %>
        <div class="card-body">
 
            <h4 class="card-title"> <%= x.title %> <small class="col text-muted small-p"> fecha DD/MM/AAA </small> </h4>
