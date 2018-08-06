@@ -1,14 +1,21 @@
 <div class="container">
+  <div class="btn-group d-flex justify-content-center botton-15">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <ion-icon name="add-circle"></ion-icon> Opciones
+    </button>
+    <div class="dropdown-menu">
+      <%= link_to d, style: "margin-top: 10px;", class:"dropdown-item"  do %>
+        <ion-icon name="create"></ion-icon> Editar
+      <% end %>
+      <%= link_to x, method: :delete, :class => "dropdown-item ", :style => "margin-top: 10px;" do %>
+        <ion-icon name="trash"></ion-icon> Borrar
+      <% end %>
+    </div>
+  </div>
 
   <div class="" style="word-wrap: break-word;">
     <%= raw x.body %>
   </div>
 
-  <%= link_to d, style: "margin-top: 10px;", class:"btn btn-outline-dark"  do %>
-    <ion-icon name="create"></ion-icon>
-  <% end %>
-  <%= link_to x, method: :delete, :class => "btn btn-outline-danger", :style => "margin-top: 10px;" do %>
-    <ion-icon name="trash"></ion-icon>
-  <% end %>
 
 </div>

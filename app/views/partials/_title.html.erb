@@ -1,5 +1,16 @@
+<%if ver == "info" or ver == "profes"%>
 <div class="carousel-inner  botton-15", style="max-height: 200px;">
   <%= image_tag("Prueba.jpg", class: "title_img img-fluid") %>
+<%elsif ver == "contact" or ver == "pei"%>
+<div class="carousel-inner  botton-15", style="max-height: 200px;">
+  <%= image_tag("Prueba.jpg", class: "title_img img-fluid") %>
+<%else%>
+<div class="carousel-inner  botton-15", style="height: 200px;
+background: #D38312;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<%end%>
   <div class="title_p">
     <div class="">
       <%if ver == "info" or ver == "profes"%>
@@ -12,6 +23,11 @@
       <%elsif ver == "pei"%>
         <h1 class="display-4" style="font-weight: bold;"> pei </h1>
         <p class="" style="text-align: center;"> Aquí podrás encontrar información acerca de nuestra institución </p>
+      <%elsif ver == "edit" or "new"%>
+      <h1 class="display-4" style="font-weight: bold;"> <%= x.title %> </h1>
+      <% unless x.admin.nil? %>
+        <p class="" style="text-align: center;"> Escrito por: "<%= x.admin.email %>" </p>
+      <%end%>
       <%else%>
         <h1 class="display-4" style="font-weight: bold;"> <%= x.title %> </h1>
         <% unless x.admin.nil? %>
